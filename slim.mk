@@ -19,8 +19,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/bacon/bacon.mk)
 
 # Inherit some common stuff.
-$(call inherit-product, vendor/eos/config/common.mk)
-$(call inherit-product, vendor/eos/config/common_full_phone.mk)
+$(call inherit-product, vendor/slim/config/common.mk)
+$(call inherit-product, vendor/slim/config/common_full_phone.mk)
 
 PRODUCT_NAME := slim_bacon
 PRODUCT_DEVICE := bacon
@@ -42,4 +42,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_FINGERPRINT=oneplus/bacon/A0001:5.0.2/LRX2
 
 # Copy device specific prebuilt files.
 PRODUCT_COPY_FILES += \
-    vendor/eos/prebuilt/common/bootanimations/BOOTANIMATION-1080x1920.zip:system/media/bootanimation.zip
+    vendor/slim/prebuilt/common/bootanimations/BOOTANIMATION-1080x1920.zip:system/media/bootanimation.zip
