@@ -17,6 +17,16 @@
 # Inherit from MSM8974 common
 -include device/oppo/msm8974-common/BoardConfigCommon.mk
 
+# Compiler flags
+TARGET_GCC_VERSION_EXP := 4.9-cortex-a15
+TARGET_USE_PIPE := true
+USE_O3_OPTIMIZATIONS := true
+SUPPRES_UNUSED_WARNING := true
+KRAIT_TUNINGS := true
+ENABLE_GCCONLY := true
+GRAPHITE_OPTS := true
+STRICT_ALIASING := true
+
 # Kernel
 TARGET_KERNEL_CONFIG := bacon_defconfig
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=bacon user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1
