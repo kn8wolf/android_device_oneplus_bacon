@@ -2,5 +2,11 @@
   {
     "repository": "android_device_oppo_msm8974-common",
     "target_path": "device/oppo/msm8974-common"
+  },
+  {
+    "remote": "github",
+    "repository": "anarkia1976/Ak_android_kernel_oneplus_caf",
+    "target_path": "kernel/oneplus/msm8974",
+    "branch": "ak-12.1-official-CAF"
   }
 ]

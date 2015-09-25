@@ -18,7 +18,7 @@
 -include device/oppo/msm8974-common/BoardConfigCommon.mk
 
 # Compiler flags
-TARGET_GCC_VERSION_EXP := 4.9-cortex-a15
+TARGET_GCC_VERSION_EXP := 5.2-cortex-a15
 TARGET_USE_PIPE := true
 USE_O3_OPTIMIZATIONS := true
 SUPPRES_UNUSED_WARNING := true
@@ -26,10 +26,15 @@ KRAIT_TUNINGS := true
 ENABLE_GCCONLY := true
 GRAPHITE_OPTS := true
 STRICT_ALIASING := true
+WITH_DEXPREOPT := true
+TARGET_USE_O_LEVEL_3 := true
 
 # Kernel
-TARGET_KERNEL_CONFIG := bacon_defconfig
+TARGET_KERNEL_CONFIG := ak_bacon_defconfig
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=bacon user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-eabi-5.2-cortex-a15/bin
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+BOARD_CUSTOM_BOOTIMG_MK := device/oneplus/bacon/mkbootimg.mk
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/oneplus/bacon/bluetooth
