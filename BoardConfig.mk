@@ -18,7 +18,7 @@
 -include device/oppo/msm8974-common/BoardConfigCommon.mk
 
 # Compiler flags
-TARGET_GCC_VERSION_EXP := 5.2-cortex-a15
+TARGET_GCC_VERSION_EXP := 4.9-cortex-a15
 TARGET_USE_PIPE := true
 USE_O3_OPTIMIZATIONS := true
 SUPPRES_UNUSED_WARNING := true
@@ -26,7 +26,6 @@ KRAIT_TUNINGS := true
 ENABLE_GCCONLY := true
 GRAPHITE_OPTS := true
 STRICT_ALIASING := true
-WITH_DEXPREOPT := true
 TARGET_USE_O_LEVEL_3 := true
 
 # Kernel
